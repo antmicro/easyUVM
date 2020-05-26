@@ -32,12 +32,10 @@ module top;
   
   always #5 clk = !clk;
   
-  logic [1:0] state;
-  
   input_if in(clk, rst);
   output_if out(clk, rst);
   
-  adder sum(in, out, state);
+  adder sum(in, out);
 
   initial begin
     `ifdef INCA

@@ -1,4 +1,4 @@
-module adder(input_if.port inter, output_if.port out_inter, output state);
+module adder(input_if.port inter, output_if.port out_inter);
     enum logic [1:0] {INITIAL,WAIT,SEND} state;
     
     always_ff @(posedge inter.clk)
